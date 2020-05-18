@@ -1,0 +1,1 @@
+# Kubernetized Java application

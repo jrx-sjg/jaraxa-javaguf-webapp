@@ -1,0 +1,27 @@
+database:
+ create-database-if-not-exist: 'true'
+ data-source-class-name: com.microsoft.sqlserver.jdbc.SQLServerDataSource
+ host: sommet-mssql-mssql-linux.databases.svc.cluster.local
+ max-pool-size: 5
+ password: ENC(VoWo2sIeS6n/w53cBZtI5FjTFTVQsZHgx8EjnoMg8C3G9PA5wdnkBKDJPReRv0iD)
+ port: 1433
+ schema: absences_develop
+ type: sqlserver
+ username: sa
+liquibase:
+ change-log: classpath:liquibase/changelog-master.xml
+ contexts: development
+minio:
+ access-key: ncstorageblobmanagement
+ bucket: sommet-develop
+ endpoint: http://absences-management-minio:9000
+ secret-key: sXQcRiyKCUFGTlsfqR4PSjIHK4PnFuNWnsiNNrheE4098HUWQDFI7TG+BGn23KLcZ31cVDvTwzMgkkJBL7SOGw==
+mock-email-from: mockemailfrom@email.com
+mock-email-to:
+- mockemailto@email.com
+schedules:
+ schedule:
+superadmin-password: '1234'
+superadmin-username: admin
+files-folder-paths:
+ pictures: pictures/app/

@@ -1,0 +1,25 @@
+# !! File must end with empty line !!
+dependencies:
+- alias: expose
+  condition: expose.enabled
+  name: exposecontroller
+  repository: http://chartmuseum.jenkins-x.io
+  version: 2.3.92
+- alias: cleanup
+  condition: cleanup.enabled
+  name: exposecontroller
+  repository: http://chartmuseum.jenkins-x.io
+  version: 2.3.92
+- condition: minio.enabled
+  name: minio
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 5.0.6
+- name: sommet-devtools
+  repository: http://jenkins-x-chartmuseum:8080
+  version: ^1.0.83
+
+  # !! "alias: preview" must be last entry in dependencies array !!
+  # !! Place custom dependencies above !!
+- alias: preview
+  name: absences-management
+  repository: file://../absences-management

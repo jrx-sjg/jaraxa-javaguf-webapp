@@ -1,0 +1,27 @@
+database:
+ create-database-if-not-exist: 'true'
+ data-source-class-name: com.microsoft.sqlserver.jdbc.SQLServerDataSource
+ host: localhost
+ max-pool-size: 5
+ password: Arelance1010
+ port: 1433
+ schema: app
+ type: sqlserver
+ username: sa
+liquibase:
+ change-log: classpath:liquibase/changelog-master.xml
+ contexts: development
+minio:
+ access-key: minio
+ bucket: local
+ endpoint: http://192.168.99.100:9001
+ secret-key: minio123
+mock-email-from: mockemailfrom@email.com
+mock-email-to:
+- mockemailto@email.com
+schedules:
+ schedule:
+superadmin-password: '1234'
+superadmin-username: admin
+files-folder-paths:
+ pictures: pictures/app/

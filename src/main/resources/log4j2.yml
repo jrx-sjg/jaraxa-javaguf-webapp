@@ -1,0 +1,59 @@
+Configuration:
+  
+  Properties:
+    Property:
+      name: log-path
+      value: "logs"
+  
+  Appenders:
+    Console:
+      name: Console_Appender
+      target: SYSTEM_OUT
+      PatternLayout:
+        pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"    
+    RollingFile:
+      - name: Application_Appender
+        fileName: ${log-path}/application.log
+        filePattern: "${log-path}/application.log.$d{yyyy-MM-dd-hh-mm}.gz"
+        PatternLayout:
+          pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+          #pattern: "[%-5level] %c{1} - %msg%n"
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 10MB
+        DefaultRollOverStrategy:
+          max: 40
+      - name: System_Appender
+        fileName: ${log-path}/system.log
+        filePattern: "${log-path}/system.log.$d{yyyy-MM-dd-hh-mm}.gz"
+        PatternLayout:
+          pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+          #pattern: "[%-5level] %c{1} - %msg%n"
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 10MB
+        DefaultRollOverStrategy:
+          max: 20
+      
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: Console_Appender
+    Logger:
+      - name: liquibase
+        level: info
+        additivity: true
+        AppenderRef:
+          - ref: System_Appender
+      - name: org.springframework
+        level: info
+        additivity: true
+        AppenderRef:
+          - ref: System_Appender
+      - name: com.jaraxa.app
+        level: info
+        additivity: true
+        AppenderRef:
+          - ref: Application_Appender
+            level: debug

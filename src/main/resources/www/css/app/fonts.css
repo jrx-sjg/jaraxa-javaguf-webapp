@@ -1,0 +1,125 @@
+@font-face {
+	font-family: proxima-nova;
+	src: url('/fonts/Proxima Nova/ProximaNova Black.otf') format("opentype");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: proxima-nova;
+	src: url('/fonts/Proxima Nova/ProximaNova Extrabld.otf') format("opentype");
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: proxima-nova;
+	src: url('/fonts/Proxima Nova/ProximaNova Bold.otf') format("opentype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: proxima-nova;
+	src: url('/fonts/Proxima Nova/ProximaNova BoldIt.otf') format("opentype");
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: proxima-nova;
+	src: url('/fonts/Proxima Nova/ProximaNova Semibold.otf') format("opentype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: proxima-nova;
+	src: url('/fonts/Proxima Nova/ProximaNova SemiboldIt.otf') format("opentype");
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: proxima-nova;
+	src: url('/fonts/Proxima Nova/ProximaNova Regular.otf') format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: proxima-nova;
+	src: url('/fonts/Proxima Nova/ProximaNova RegularIt.otf') format("opentype");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: proxima-nova;
+	src: url('/fonts/Proxima Nova/ProximaNova Light.otf') format("opentype");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: proxima-nova;
+	src: url('/fonts/Proxima Nova/ProximaNova LightIt.otf') format("opentype");
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: chronicle-deck;
+	src: url('/fonts/Chronicle Deck/ChronicleDeck-Black.otf') format("opentype");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: chronicle-deck;
+	src: url('/fonts/Chronicle Deck/ChronicleDeck-BlackItalic.otf') format("opentype");
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: chronicle-deck;
+	src: url('/fonts/Chronicle Deck/ChronicleDeck-Bold.otf') format("opentype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: chronicle-deck;
+	src: url('/fonts/Chronicle Deck/ChronicleDeck-BoldItalic.otf') format("opentype");
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: chronicle-deck;
+	src: url('/fonts/Chronicle Deck/ChronicleDeck-Semibold.otf') format("opentype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: chronicle-deck;
+	src: url('/fonts/Chronicle Deck/ChronicleDeck-Semitalic.otf') format("opentype");
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: chronicle-deck;
+	src: url('/fonts/Chronicle Deck/ChronicleDeck-Roman.otf') format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: chronicle-deck;
+	src: url('/fonts/Chronicle Deck/ChronicleDeck-Italic.otf') format("opentype");
+	font-weight: 400;
+	font-style: italic;
+}

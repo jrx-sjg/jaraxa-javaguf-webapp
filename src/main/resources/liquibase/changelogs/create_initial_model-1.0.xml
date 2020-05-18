@@ -1,0 +1,44 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+   
+   <changeSet id="create_users" author="jrx_jlp">
+    <createTable tableName="users">
+    
+      <column name="id" type="INT" autoIncrement="true" incrementBy="1" startWith="1">
+        <constraints primaryKey="true" nullable="false" />
+      </column>
+      
+      <column name="user_email" type="VARCHAR(100)">
+        <constraints nullable="false" />
+      </column>
+      
+      <column name="password" type="VARCHAR(100)">
+        <constraints nullable="false" />
+      </column>
+      
+      <column name="last_name" type="VARCHAR(100)">
+        <constraints nullable="false" />
+      </column>
+      
+      <column name="first_name" type="VARCHAR(100)">
+        <constraints nullable="false" />
+      </column>
+      
+      <column name="active" type="BIT" defaultValue="NULL">
+        <constraints nullable="true" />
+      </column>
+      
+      <column name="last_connection" type="DATETIME" defaultValue="NULL">
+        <constraints nullable="true" />
+      </column>
+      
+      <column name="timestamp" type="DATETIME" defaultValueComputed="getdate()">
+        <constraints nullable="false" />
+      </column>
+      
+    </createTable>
+   </changeSet>
+ 
+</databaseChangeLog>

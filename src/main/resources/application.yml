@@ -1,0 +1,121 @@
+server:
+  servlet:
+    session:
+      timeout: 30m
+spring:
+  devtools:
+    restart:
+      additional-exclude: www/**
+  datasource:
+    remove-abandoned: true
+    remove-abandoned-timeout: 60
+  mvc:
+    view:
+      suffix: .html
+  servlet:
+    multipart:
+      max-file-size: 128MB
+      max-request-size: 128MB
+      enabled: true
+  quartz:
+    job-store-type: jdbc
+    scheduler-name: AppScheduler
+    auto-startup: false
+    startup-delay: 0
+    wait-for-jobs-to-complete-on-shutdown: false
+    overwrite-existing-jobs: false
+    properties:
+      org:
+        quartz:
+          scheduler:
+            skipUpdateCheck:  skipUpdateCheck
+            instanceName:  Absences
+            instanceId:  AUTO
+            batchTriggerAcquisitionMaxCount:  32
+            idleWaitTime:  30000
+          jobStore:
+            misfireThreshold:  3600000
+            class: org.quartz.impl.jdbcjobstore.JobStoreCMT
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.MSSQLDelegate
+            isClustered: true
+            clusterCheckinInterval:  20000
+            acquireTriggersWithinLock: true
+            useProperties:  false
+            tablePrefix:  QRTZ_
+    jdbc:
+      initialize-schema: never
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: xxx
+    password: xxx
+    port: 465
+    properties:
+      mail:
+        debug: true
+        smtp:
+          debug: true
+          auth:
+            enabled: true
+          starttls:
+            enable: true
+          ssl:
+            trust: '*'
+    protocol: smtps
+    test-connection: false 
+           
+# monitoring system configuration
+management:
+  server:
+    port: 8081
+  endpoints:
+    web:
+      basePath: "/monitoring"
+      exposure:
+        include: "*"
+  endpoint:
+    auditevents:
+      enabled: true
+    beans:
+      enabled: false
+    caches:
+      enabled: false
+    conditions:
+      enabled: false
+    configprops:
+      enabled: false
+    env:
+      enabled: false
+    health:
+      enabled: true
+      sensitive: false
+      show-details: always
+    heapdump:
+      enabled: false
+    httptrace:
+      enabled: true
+    info:
+      enabled: true
+    integrationgrapth:
+      enabled: false
+    logfile:
+      enabled: false
+    loggers:
+      enabled: false
+    liquibase:
+      enabled: false
+    metrics:
+      enabled: false
+    mappings:
+      enabled: false
+    prometheus:
+      enabled: true
+    scheduledtasks:
+      enabled: false
+    sessions:
+      enabled: false
+    shutdown:
+      enabled: false
+    threaddump:
+      enabled: false
+  

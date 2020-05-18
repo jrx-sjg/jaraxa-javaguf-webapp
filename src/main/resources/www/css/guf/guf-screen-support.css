@@ -1,0 +1,198 @@
+/**
+ * GUF Screen Support
+ * 
+ * Aims to support modern edge-to-edge screens and other specific screen requirements
+ *
+ * Dependencies:
+ *	- cordova-plugin-device
+ *	- guf-screen-support.js
+ *	- guf-keyboard.js (adds KEYBOARD_VISIBLE_CSS_CLASS)
+ */
+ 
+ /**
+ * Initialization
+ */
+.guf-safe-padding-top {
+	padding-top: 0;
+}
+.guf-safe-padding-right {
+	padding-right: 0;
+}
+.guf-safe-padding-bottom {
+	padding-bottom: 0;
+}
+.guf-safe-padding-left {
+	padding-left: 0;
+}
+.guf-safe-margin-top {
+	margin-top: 0;
+}
+.guf-safe-margin-right {
+	margin-right: 0;
+}
+.guf-safe-margin-bottom {
+	margin-bottom: 0;
+}
+.guf-safe-margin-left {
+	margin-left: 0;
+}
+.guf-safe-height-top {
+	height: auto;
+}
+.guf-safe-height-bottom {
+	height: auto;
+}
+.guf-safe-width-right {
+	width: auto;
+}
+.guf-safe-width-left {
+	width: auto;
+}
+.guf-safe-top {
+	top: auto;
+}
+.guf-safe-right{
+	right: auto;
+}
+.guf-safe-bottom {
+	bottom: auto;
+}
+.guf-safe-left {
+	left: auto;
+}
+:root {
+	--guf-safe-area-top: 0px;
+	--guf-safe-area-right: 0px;
+	--guf-safe-area-bottom: 0px;
+	--guf-safe-area-left: 0px;
+}
+/**
+ * iOS
+ */
+body.guf-device-ios.guf-orientation-portrait .guf-safe-padding-top,
+body.guf-device-ios.guf-device-tablet.guf-orientation-landscape .guf-safe-padding-top {
+	padding-top: 20px !important;
+}
+body.guf-device-ios.guf-orientation-portrait .guf-safe-margin-top,
+body.guf-device-ios.guf-device-tablet.guf-orientation-landscape .guf-safe-margin-top {
+	margin-top: 20px !important;
+}
+body.guf-device-ios.guf-orientation-portrait .guf-safe-height-top,
+body.guf-device-ios.guf-device-tablet.guf-orientation-landscape .guf-safe-height-top {
+	height: 20px !important;
+}
+body.guf-device-ios.guf-orientation-portrait .guf-safe-top,
+body.guf-device-ios.guf-device-tablet.guf-orientation-landscape .guf-safe-top {
+	top: 20px !important;
+}
+body.guf-device-ios.guf-orientation-portrait,
+body.guf-device-ios.guf-device-tablet.guf-orientation-landscape {
+	--guf-safe-area-top: 20px;
+}
+/* iPhone X, XS, XS Max, XR */
+body.guf-device-ios.guf-orientation-portrait.guf-device-iphonex .guf-safe-padding-top {
+	padding-top: 44px !important;
+}
+body.guf-device-ios.guf-orientation-portrait.guf-device-iphonex .guf-safe-margin-top {
+	margin-top: 44px !important;
+}
+body.guf-device-ios.guf-orientation-portrait.guf-device-iphonex .guf-safe-height-top {
+	height: 44px !important;
+}
+body.guf-device-ios.guf-orientation-portrait.guf-device-iphonex .guf-safe-top {
+	top: 44px !important;
+}
+body.guf-device-ios.guf-orientation-portrait.guf-device-iphonex {
+	--guf-safe-area-top: 44px;
+}
+body.guf-device-ios.guf-orientation-portrait.guf-device-iphonex:not(.guf-keyboard-visible) .guf-safe-padding-bottom {
+	padding-bottom: 34px !important;
+}
+body.guf-device-ios.guf-orientation-portrait.guf-device-iphonex:not(.guf-keyboard-visible) .guf-safe-margin-bottom {
+	margin-bottom: 34px !important;
+}
+body.guf-device-ios.guf-orientation-portrait.guf-device-iphonex:not(.guf-keyboard-visible) .guf-safe-height-bottom {
+	height: 34px !important;
+}
+body.guf-device-ios.guf-orientation-portrait.guf-device-iphonex:not(.guf-keyboard-visible) .guf-safe-bottom {
+	bottom: 34px !important;
+}
+body.guf-device-ios.guf-orientation-portrait.guf-device-iphonex:not(.guf-keyboard-visible) {
+	--guf-safe-area-bottom: 34px;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex .guf-safe-padding-right {
+	padding-right: 44px !important;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex .guf-safe-margin-right {
+	margin-right: 44px !important;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex .guf-safe-width-right {
+	width: 44px !important;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex .guf-safe-right {
+	right: 44px !important;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex {
+	--guf-safe-area-right: 44px;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex:not(.guf-keyboard-visible) .guf-safe-padding-bottom {
+	padding-bottom: 21px !important;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex:not(.guf-keyboard-visible) .guf-safe-margin-bottom {
+	margin-bottom: 21px !important;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex:not(.guf-keyboard-visible) .guf-safe-height-bottom {
+	height: 21px !important;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex:not(.guf-keyboard-visible) .guf-safe-bottom {
+	bottom: 21px !important;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex:not(.guf-keyboard-visible) {
+	--guf-safe-area-bottom: 21px;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex .guf-safe-padding-left {
+	padding-left: 44px !important;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex .guf-safe-margin-left {
+	margin-left: 44px !important;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex .guf-safe-width-left {
+	width: 44px !important;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex .guf-safe-left {
+	left: 44px !important;
+}
+body.guf-device-ios.guf-orientation-landscape.guf-device-iphonex {
+	--guf-safe-area-left: 44px;
+}
+/* iPad Pro 3rd Gen (11 and 12'9 inches) */
+body.guf-device-ios.guf-device-ipadpro3 .guf-safe-padding-top {
+	padding-top: 24px !important;
+}
+body.guf-device-ios.guf-device-ipadpro3 .guf-safe-margin-top {
+	margin-top: 24px !important;
+}
+body.guf-device-ios.guf-device-ipadpro3 .guf-safe-height-top {
+	height: 24px !important;
+}
+body.guf-device-ios.guf-device-ipadpro3 .guf-safe-top {
+	top: 24px !important;
+}
+body.guf-device-ios.guf-device-ipadpro3 {
+	--guf-safe-area-top: 24px;
+}
+body.guf-device-ios.guf-device-ipadpro3:not(.guf-keyboard-visible) .guf-safe-padding-bottom {
+	padding-bottom: 20px !important;
+}
+body.guf-device-ios.guf-device-ipadpro3:not(.guf-keyboard-visible) .guf-safe-margin-bottom {
+	margin-bottom: 20px !important;
+}
+body.guf-device-ios.guf-device-ipadpro3:not(.guf-keyboard-visible) .guf-safe-height-bottom {
+	height: 20px !important;
+}
+body.guf-device-ios.guf-device-ipadpro3:not(.guf-keyboard-visible) .guf-safe-bottom {
+	bottom: 20px !important;
+}
+body.guf-device-ios.guf-device-ipadpro3:not(.guf-keyboard-visible) {
+	--guf-safe-area-bottom: 20px;
+}

@@ -1,0 +1,194 @@
+campus-commons:
+  database:
+    create-database-if-not-exist: 'true'
+    data-source-class-name: com.microsoft.sqlserver.jdbc.SQLServerDataSource
+    host: localhost
+    max-pool-size: 5
+    password: Arelance1010
+    port: 1433
+    schema: absences
+    type: sqlserver
+    username: sa
+  filenames:
+    absence-detail: none
+    advanced-transactions: none
+    change-absences: none
+    class-record: none
+    notifications: none
+    roll-call: none
+    pending-classrecord: none
+    pending-class-record-template: none
+    update-meeting: none
+    user-management: none
+    non-process-folder: uploads/nonprocess
+    process-folder: uploads/process
+    source-folder: uploads/source
+    auxiliar-year-semester-dates: auxiliar_year_semester_dates.csv
+    absences-limits: absences_limits.csv
+    time-period: time_periods.csv
+    teacher-course-class-student: teacher_course_class_student.csv
+    students-not-notified: students_not_notified.csv
+    exceptions-roll-call: exceptions_roll_call.csv
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.xml
+    contexts: development
+  minio:
+    access-key: minio
+    bucket: local
+    endpoint: http://192.168.99.100:9001
+    secret-key: minio123
+  schedules:
+    absences-calculation: '0 */2 * ? * *'
+    file-upload: '0 */5 * ? * *'
+  superadmin-password: '1234'
+  superadmin-username: admin
+  mock-email-from: jaraxa4sommet@gmail.com
+  mock-email-to: 
+    - jaraxa4sommet@gmail.com  
+campus-groups:
+- campus:
+  - lesroches-crans-montana
+  files-folder-paths:
+    imports-source: uploads/lesroches-crans-montana/source
+    imports-non-processed: uploads/lesroches-crans-montana/non-processed
+    imports-processed: uploads/lesroches-crans-montana/processed
+    notification-templates: notification-templates/lesroches-crans-montana
+    pictures: pictures/lesroches-crans-montana/
+  ldap-managers:
+    base-search: dc=LRM,dc=local
+    bind-password: secret
+    bind-user: uid=admin, ou=system
+    fields:
+      email: mail
+      firstname: givenName
+      id: id
+      lastname: sn
+      password: userpassword
+      username: sAMAccountName
+    host: 192.168.99.100
+    param: mail
+    port: '10389'
+    protocol: LDAP
+  ldap-students:
+    base-search: o=LesRochesCert,c=ES
+    bind-password: secret
+    bind-user: uid=admin, ou=system
+    fields:
+      email: mail
+      firstname: cn
+      id: employeeid
+      lastname: sn
+      password: userpassword
+      username: uid
+    host: 192.168.99.100
+    param: mail
+    port: '10390'
+    protocol: LDAP
+  process-codes:
+    contract: none
+    late: none
+    retake: none
+  smtp:
+    encryption-protocol: none
+    password: none
+    port: '3031'
+    sender-email: none@none
+    username: none
+- campus:
+  - lesroches-marbella
+  files-folder-paths:
+    imports-source: uploads/lesroches-marbella/source
+    imports-processed: uploads/lesroches-marbella/processed
+    imports-non-processed: uploads/lesroches-marbella/non-processed
+    notification-templates: notification-templates/lesroches-marbella
+    pictures: pictures/lesroches-marbella/
+  ldap-managers:
+    base-search: dc=LRM,dc=local
+    bind-password: secret
+    bind-user: uid=admin, ou=system
+    fields:
+      email: mail
+      firstname: givenName
+      id: id
+      lastname: sn
+      password: userpassword
+      username: sAMAccountName
+    host: 192.168.99.100
+    param: mail
+    port: '10389'
+    protocol: LDAP
+  ldap-students:
+    base-search: o=LesRochesCert,c=ES
+    bind-password: secret
+    bind-user: uid=admin, ou=system
+    fields:
+      email: mail
+      firstname: cn
+      id: employeeid
+      lastname: sn
+      password: userpassword
+      username: uid
+    host: 192.168.99.100
+    param: mail
+    port: '10390'
+    protocol: LDAP
+  process-codes:
+    contract: none
+    late: none
+    retake: none
+  smtp:
+    encryption-protocol: none
+    password: none
+    port: '3031'
+    sender-email: none@none
+    username: none
+- campus:
+  - glion-bulle
+  - glion-london
+  - glion-glion
+  files-folder-paths:
+    imports-source: uploads/gihe-glion/source
+    imports-non-processed: uploads/gihe-glion/non-processed
+    imports-processed: uploads/gihe-glion/processed
+    notification-templates: notification-templates/gihe-glion
+    pictures: pictures/gihe/
+  ldap-managers:
+    base-search: dc=LRM,dc=local
+    bind-password: secret
+    bind-user: uid=admin, ou=system
+    fields:
+      email: mail
+      firstname: givenname
+      id: id
+      lastname: sn
+      password: userpassword
+      username: samaccountname
+    host: 192.168.99.100
+    param: mail
+    port: '10391'
+    protocol: LDAP
+  ldap-students:
+    base-search: o=LesRochesCert,c=ES
+    bind-password: secret
+    bind-user: uid=admin, ou=system
+    fields:
+      email: mail
+      firstname: cn
+      id: employeeid
+      lastname: sn
+      password: userpassword
+      username: uid
+    host: 192.168.99.100
+    param: mail
+    port: '10391'
+    protocol: LDAP
+  process-codes:
+    contract: none
+    late: none
+    retake: none
+  smtp:
+    encryption-protocol: none
+    password: none
+    port: '3031'
+    sender-email: none@none
+    username: none

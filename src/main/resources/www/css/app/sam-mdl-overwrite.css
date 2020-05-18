@@ -1,0 +1,279 @@
+
+/*************************** font-family overwrite  ***************************/
+
+html, body, input, textarea,
+h1, h2, h3, h4, h5, h6, h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, blockquote,
+.mdl-textfield__input, .mdl-button, .mdl-chip, .mdl-list__item, .mdl-layout-title, .mdl-snackbar, .mdl-snackbar__action {
+  font-family: proxima-nova,'Helvetica','Arial',sans-serif;
+}
+
+/*************************** font-weight overwrite  ***************************/
+
+html,
+body,
+p,
+a,
+.mdl-layout-title,
+.mdl-button,
+.mdl-list__item,
+.mdl-card,
+.mdl-navigation__link {
+	font-weight: 400;
+}
+
+.mdl-menu__item,
+.mdl-chip__text {
+	font-weight: 400;
+}
+
+.mdl-textfield__label {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.60);
+}
+
+.mdl-dialog__content p {
+  font-weight: 400;
+}
+
+/****************************  TextField overwrites  ***************************/
+
+.mdl-textfield__input {
+  border-radius: 0;
+}
+
+.mdl-textfield__error {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  min-width: 0px;
+  width: 100%;
+}
+
+/************************* NOT overwritten font-weight *************************/
+
+/*h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+h6 {
+  font-weight: 400;
+}
+
+
+blockquote {
+  font-weight: 300;
+}
+
+dt {
+  font-weight: 700;
+}
+
+address {
+  font-weight: 400;
+}
+
+ul, ol {
+  font-weight: 400;
+}
+
+
+/**
+ * Class Name Styles
+ *
+.mdl-typography--display-4 {
+  font-weight: 300;
+}
+
+.mdl-typography--display-4-color-contrast {
+  font-weight: 300;
+}
+
+.mdl-typography--display-3 {
+  font-weight: 400;
+}
+
+.mdl-typography--display-3-color-contrast {
+  font-weight: 400;
+}
+
+.mdl-typography--display-2 {
+  font-weight: 400;
+}
+
+.mdl-typography--display-2-color-contrast {
+  font-weight: 400;
+}
+
+.mdl-typography--display-1 {
+  font-weight: 400;
+}
+
+.mdl-typography--display-1-color-contrast {
+  font-weight: 400;
+}
+
+.mdl-typography--headline {
+  font-weight: 400;
+}
+
+.mdl-typography--headline-color-contrast {
+  font-weight: 400;
+}
+
+.mdl-typography--title {
+  font-weight: 500;
+}
+
+.mdl-typography--title-color-contrast {
+  font-weight: 500;
+}
+
+.mdl-typography--subhead {
+  font-weight: 400;
+}
+
+.mdl-typography--subhead-color-contrast {
+  font-weight: 400;
+}
+
+.mdl-typography--body-2 {
+  font-weight: bold;
+}
+
+.mdl-typography--body-2-color-contrast {
+  font-weight: bold;
+}
+
+.mdl-typography--body-1 {
+  font-weight: 400;
+}
+
+.mdl-typography--body-1-color-contrast {
+  font-weight: 400;
+}
+
+.mdl-typography--body-2-force-preferred-font {
+  font-weight: 500;
+}
+
+.mdl-typography--body-2-force-preferred-font-color-contrast {
+  font-weight: 500;
+}
+
+.mdl-typography--body-1-force-preferred-font {
+  font-weight: 400;
+}
+
+.mdl-typography--body-1-force-preferred-font-color-contrast {
+  font-weight: 400;
+}
+
+.mdl-typography--caption {
+  font-weight: 400;
+}
+
+.mdl-typography--caption-force-preferred-font {
+  font-weight: 400;}
+
+.mdl-typography--caption-color-contrast {
+  font-weight: 400;
+}
+
+.mdl-typography--caption-force-preferred-font-color-contrast {
+  font-weight: 400;
+}
+
+.mdl-typography--menu {
+  font-weight: 500;
+}
+
+.mdl-typography--menu-color-contrast {
+  font-weight: 500;
+}
+
+.mdl-typography--button {
+  font-weight: 500;
+}
+
+.mdl-typography--button-color-contrast {
+  font-weight: 500;
+}
+
+.mdl-badge[data-badge]:after {
+	font-weight: 600;
+}
+
+.mdl-card__title-text {
+  font-weight: 300;
+}
+
+.mdl-data-table th {
+	font-weight: bold;
+}
+
+.mdl-data-table th.mdl-data-table__header--sorted-ascending:before, .mdl-data-table th.mdl-data-table__header--sorted-descending:before {
+	font-weight: normal;
+}
+
+.mdl-mega-footer--heading,
+.mdl-mega-footer__heading {
+  font-weight: 500;
+}
+
+.mdl-mega-footer--link-list li,
+.mdl-mega-footer__link-list li {
+  font-weight: 400;
+}
+
+.mdl-list__item .mdl-list__item-secondary-content .mdl-list__item-secondary-info {
+	font-weight: 400;
+}
+
+.mdl-list__item--two-line .mdl-list__item-primary-content .mdl-list__item-sub-title {
+	font-weight: 400;
+}
+
+.mdl-list__item--three-line .mdl-list__item-text-body {
+	font-weight: 400;
+}
+
+.mdl-layout__title {
+	font-weight: 500;
+}
+
+.mdl-layout__tab {
+	font-weight: 500;
+}
+
+.mdl-snackbar__action {
+	font-weight: 500;
+}
+
+.mdl-tabs__tab {
+	font-weight: 500;
+}
+
+.mdl-tooltip {
+	font-weight: 500;
+}*/
+

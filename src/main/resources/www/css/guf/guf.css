@@ -1,0 +1,44 @@
+html {
+  -webkit-text-size-adjust: 100%; /* avoid iOS resizing text when rotating device */
+}
+html.guf-device-ios,
+body.guf-device-ios {
+  position: fixed;
+  overflow: hidden;
+  min-height: initial;
+}
+
+body.guf {
+	display:flex;
+	width:100%;
+	height:100%;
+  overflow: hidden;
+}
+
+/* Hide play button for Safari video element in iOS */
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+img.emoji {
+  height:1em;
+}
+
+body.guf-os-android.guf-device-paused * {
+  display:none !important;
+}
+
+body.guf-momentum-disabled * {
+  -webkit-overflow-scrolling: auto;
+}
